@@ -6,8 +6,4 @@
 *.iml
 *.ipr
 target/
-# Datasource local storage ignored files
-/../../../../../../:\Users\danie\IdeaProjects\WebDevelopmentEE\.idea/dataSources/
-/dataSources.local.xml
-# Editor-based HTTP Client requests
-/httpRequests/
+out/
