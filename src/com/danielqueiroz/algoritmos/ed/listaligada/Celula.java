@@ -3,7 +3,13 @@ package com.danielqueiroz.algoritmos.ed.listaligada;
 public class Celula {
 
     private Object elemento;
+
     private Celula proximo;
+    private Celula anterior;
+
+    public Celula(Object elemento) {
+        this(elemento, null);
+    }
 
     public Celula(Object elemento, Celula proximo) {
         this.elemento = elemento;
@@ -20,5 +26,17 @@ public class Celula {
 
     public void setProximo(Celula proximo) {
         this.proximo = proximo;
+    }
+
+    public void setElemento(Object elemento) {
+        this.elemento = elemento;
+    }
+
+    public Celula getAnterior() {
+        return anterior;
+    }
+
+    public void setAnterior(Celula anterior) {
+        this.anterior = anterior;
     }
 }
