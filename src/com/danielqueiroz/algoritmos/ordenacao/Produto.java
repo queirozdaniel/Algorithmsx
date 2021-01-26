@@ -1,4 +1,4 @@
-package com.danielqueiroz.algoritmos.ordenacao.selectionsort;
+package com.danielqueiroz.algoritmos.ordenacao;
 
 public class Produto {
 

@@ -1,16 +1,23 @@
 package com.danielqueiroz.algoritmos.ordenacao.selectionsort;
 
+import com.danielqueiroz.algoritmos.ordenacao.Produto;
+
 public class SelectionSort {
 
     public void ordenaMenor(Produto[] produtos, int quantidadeDeElementos){
-        for (int indice = 0; indice < quantidadeDeElementos - 1; indice++ ){
-            int menor = buscaMenor(produtos, indice, quantidadeDeElementos - 1);
-            Produto produtoAtual = produtos[indice];
-            Produto produtoMenor = produtos[menor];
+        for (int atual = 0; atual < quantidadeDeElementos - 1; atual++ ){
+            int menor = buscaMenor(produtos, atual, quantidadeDeElementos - 1);
 
-            produtos[indice] = produtoMenor;
-            produtos[menor] = produtoAtual;
+            trocaPosicao(produtos, atual, menor);
         }
+    }
+
+    private static void trocaPosicao(Produto[] produtos, int primeiro, int segundo){
+        Produto primeiroProduto = produtos[primeiro];
+        Produto segundoProduto = produtos[segundo];
+
+        produtos[primeiro] = segundoProduto;
+        produtos[segundo] = primeiroProduto;
     }
 
     private static int buscaMenor(Produto[] produto, int inicio, int termino) {
