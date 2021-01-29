@@ -8,10 +8,7 @@ public class InsertionSort {
         for (int atual = 1; atual < quantidadeDeElementos; atual++){
             int analise = atual;
             while (analise > 0 && produtos[analise].getValor() < produtos[analise - 1].getValor()){
-
-
                 trocaPosicao(produtos, analise, analise - 1);
-
                 analise--;
             }
         }
